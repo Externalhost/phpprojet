@@ -35,3 +35,55 @@ body{
     background-color: black;
     color: white;
 }
+.img{
+    margin-left: 52px;
+    margin-top: 52px;
+    height: 150px;
+    width: 10%;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+}
+
+.img #view{
+    margin-left: 57.5px;
+
+}
+
+.img p{
+    font-size: 15px;
+}
+.inscription{
+        margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+.inscription:hover{
+    opacity: 0.90;
+}
+.inscription .jumbotron{
+    background-color: black;
+    color: white;
+}
+.login{
+        margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+.login:hover{
+    opacity: 0.90;
+}
+.login .jumbotron{
+    background-color: black;
+    color: white;
+}
