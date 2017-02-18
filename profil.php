@@ -16,8 +16,7 @@ $iduser = $_SESSION['id'];
         
 <?php $user->getUserLastUpload($iduser, $ipaddress); ?>
           
-           
-        
+                   
 
     </div>
 </div>

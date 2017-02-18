@@ -1,0 +1,37 @@
+body{
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.upload{
+        margin-top: 25%;
+    margin-left: 25%;
+    width: 50%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+
+.upload:hover{
+    opacity: 0.90;
+}
+.upload .jumbotron{
+    background-color: black;
+    color: white;
+}
+.lastupload{
+    margin-left: 10%;
+    width: 80%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+.lastupload:hover{
+    opacity: 0.90;
+}
+.lastupload .jumbotron{
+    background-color: black;
+    color: white;
+}
