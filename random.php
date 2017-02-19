@@ -19,3 +19,22 @@ $arg=[
     ':id' => $idrandomphoto
 ];
 $req->execute($arg);
+while ($randomhpoto = $req->fetch()){
+
+$namerandomphoto = $randomhpoto['nom'];
+}
+$divrandom = "<img src='uploads/$namerandomphoto'>";
+}else{
+$divrandom = "Aucune photo n'est en ligne";
+}
+?>
+
+<div class="lastupload">
+    <div class="jumbotron">
+        <center><?php echo $divrandom; ?></center> <br>
+
+
+    </div>
+</div>
+</body>
+</html>
