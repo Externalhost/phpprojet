@@ -51,7 +51,7 @@ $pwcrypt = crypt($password, '$2a$07$projetphp8gagpicturehosting$');
                         
                     </div>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="mot de passe" name="password" aria-describedby="basic-addon2">
+                        <input type="password" class="form-control" placeholder="mot de passe" name="password" aria-describedby="basic-addon2">
                         <span class="input-group-addon" id="basic-addon2">Password</span>
                         
                     </div>
