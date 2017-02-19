@@ -9,16 +9,15 @@ if(!empty($_SESSION)){
         header('Location:index.php');
     }
 // Traiter le post
-if (!empty($_POST) ) {
-
-$password = $_POST['password'];
+$password = htmlentities($_POST['password']);
+$pseudo = htmlentities($_POST['pseudo']);
 
 $pwcrypt = crypt($password, '$2a$07$projetphp8gagpicturehosting$');
 
 
     $stmt = $dbh->prepare('SELECT * FROM users WHERE pseudo = :pseudo AND pasword = :password');
     $arg=[
-        ':pseudo' => $_POST['pseudo'],
+        ':pseudo' => $pseudo,
         ':password' => $pwcrypt
     ];
     $stmt->execute($arg);
@@ -30,7 +29,6 @@ $pwcrypt = crypt($password, '$2a$07$projetphp8gagpicturehosting$');
     //$users[0]['count'];
     // Tester via count() le nombre d'éléments dans le tableau
     if (count($users) > 0) {
-        echo "ces good";
         // Si l'utilisateur existe -> créer la variable $_SESSION['connected'] avec un bool
         $_SESSION['connected'] = true;
         $_SESSION['id'] = $users[0]['id'];
