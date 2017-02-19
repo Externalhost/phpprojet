@@ -8,10 +8,9 @@ if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['password'
 
 
 
-$nom = $_POST['nom'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-
+$nom = htmlentities($_POST['nom']);
+$email = htmlentities($_POST['email']);
+$password = htmlentities($_POST['password']);
 
 
 $pwcrypt = crypt($password, '$2a$07$projetphp8gagpicturehosting$');
