@@ -9,6 +9,8 @@ if(!empty($_SESSION)){
         header('Location:index.php');
     }
 // Traiter le post
+if (!empty($_POST) ) {
+    
 $password = htmlentities($_POST['password']);
 $pseudo = htmlentities($_POST['pseudo']);
 
