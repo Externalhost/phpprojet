@@ -87,3 +87,30 @@ body{
     background-color: black;
     color: white;
 }
+.profil{
+        margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+.profil:hover{
+    opacity: 0.90;
+}
+.profil .jumbotron{
+    background-color: black;
+    color: white;
+}
+nav {
+    opacity: 0.75;
+     -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+}
+nav:hover{
+    opacity: 0.90;
+}
+nav img{
+    width: 50px;
+    margin-top: -15px;
+}
