@@ -3,12 +3,12 @@ require_once('class/dbset.php');
 require_once('includes/navbar.php');
 $bdd = new bdd;
 
+$good = false;
+if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
-if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
 
-
-$nom = htmlentities($_POST['nom']);
+$nom = htmlentities($_POST['pseudo']);
 $email = htmlentities($_POST['email']);
 $password = htmlentities($_POST['password']);
 
@@ -24,7 +24,8 @@ $arg=[
 ];
 $stmt->execute($arg);
 
-echo "Vous etes correctement inscrit <br>";
+
+$good = true;
 }
 ?>
 <div class="inscription">
@@ -43,7 +44,7 @@ echo "Vous etes correctement inscrit <br>";
                         
                     </div>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="mot de passe" name="password" aria-describedby="basic-addon2">
+                        <input type="password" class="form-control" placeholder="mot de passe" name="password" aria-describedby="basic-addon2">
                         <span class="input-group-addon" id="basic-addon2">Password</span>
                         
                     </div>
@@ -58,8 +59,10 @@ echo "Vous etes correctement inscrit <br>";
             </form>
 
             <?php
-            if(empty($_POST)){
+            if($good == false){
                 echo "<center> Tout les champs sont obligatoire !</center>";
+            }else{
+                echo "<center> <h2>Vous etes correctement inscrit <br></h2></center>";
             }
 
             ?>
